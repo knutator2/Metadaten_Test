@@ -12,6 +12,6 @@ jobs:
       - name: Merge content of all ttl files and append it to 'all.tll'
         run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -vh '@prefix' >> all.ttl
       - name: Add and Commit Changes
-          uses: EndBug/add-and-commit@v9.0.1
+        uses: EndBug/add-and-commit@v9.0.1
           with:
             message: 'updates file all.ttl'
