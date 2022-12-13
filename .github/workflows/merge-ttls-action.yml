@@ -6,4 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo 'workflow works!'
+      - run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -h '@prefix' | sort -u > all.ttl
+      - run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -vh '@prefix' >> all.ttl

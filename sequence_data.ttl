@@ -12,14 +12,6 @@
         foaf:mbox "desh@rki.de" ;
         foaf:name "Robert Koch-Institut | DESH Projektteam"
         ] ;
-    dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/state> ;
-    dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/Level/federal> ;
-    dcatde:geocodingDescription "Länderabdeckung des Bundes";
-    dct:creator [ a foaf:Agent ;
-        foaf:homepage <https://www.rki.de> ;
-        foaf:mbox "info@rki.de" ;
-        foaf:name "Robert Koch-Institut"
-    ] ;
     dct:contributor [
       a foaf:Agent;
         foaf:name "Michaela Diercke";
