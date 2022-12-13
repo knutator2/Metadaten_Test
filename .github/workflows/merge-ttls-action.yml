@@ -5,6 +5,13 @@ jobs:
   merge-ttl:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -h '@prefix' | sort -u > all.ttl
-      - run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -vh '@prefix' >> all.ttl
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: find Namespaces in all ttl files and add it to 'all.ttl'
+        run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -h '@prefix' | sort -u > all.ttl
+      - name: Merge content of all ttl files and append it to 'all.tll'
+        run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -vh '@prefix' >> all.ttl
+      - name: Add and Commit Changes
+          uses: EndBug/add-and-commit@v9.0.1
+          with:
+            message: 'updates file all.ttl'
