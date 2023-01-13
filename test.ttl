@@ -1,0 +1,57 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<test.de/test>
+    a dcat:Dataset ;
+    dcatde:contributorID <test.de/robertKochInstitut> ;
+    dcatde:maintainer [ a foaf:Agent ;
+                        foaf:mbox "test@rki.de" ;
+                        foaf:name "test | Open Data Team"
+      ] ;
+    dct:contributor [
+          a foaf:Agent;
+          foaf:name "Max Mustermann";
+      ];
+    dct:description "" ;
+    dct:issued "2021-07-20T00:00:00"^^xsd:dateTime ;
+    dct:modified "2021-08-17T06:25:05.371498"^^xsd:dateTime ;
+    dct:publisher [ a foaf:Organization ;
+                    foaf:mbox "opendata@rki.de" ;
+                    foaf:name "Robert Koch-Institut | MF 4 - Forschungsdatenmanagement"
+      ] ;
+    dct:title "Test" ;
+    dcat:contactPoint [ a vcard:Organization ;
+                        vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
+                        vcard:hasCountryName "Deutschland" ;
+                        vcard:hasEmail "opendata@rki.de";
+                        vcard:hasLocality "Berlin" ;
+                        vcard:hasPostalCode "13353" ;
+                        vcard:hasStreetAddress "Nordufer 20"
+      ] ;
+    dcat:distribution [
+          a dcat:Distribution ;
+          dcatde:licenseAttributionByText "Robert Koch-Insitut (2021): COVID-19-Hospitalisierungen in Deutschland, Berlin: Zenodo. DOI: 10.5281/zenodo.5139363" ;
+          dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+          dct:description "Die Daten enthalten die Hospitalisierungen..." ;
+          dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+          dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+          dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+          dct:title "Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv" ;
+          dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland/master/Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv>;
+      ];
+    dcat:keyword "COVID-19",
+    "Coronavirus",
+    "Deutschland",
+    "hospitalization",
+    "infektion",
+    "krankenhauseinweisung",
+    "sars-cov-2";
+    dcat:landingPage <https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
+    <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
+    <http://publications.europa.eu/resource/authority/data-theme/TECH> .
