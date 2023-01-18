@@ -9,9 +9,9 @@
 <https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland> a dcat:Dataset ;
     dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
     dcatde:maintainer [ a foaf:Agent ;
-        foaf:mbox "desh@rki.de" ;
-        foaf:name "Robert Koch-Institut | DESH Projektteam"
-        ] ;
+        foaf:mbox "opendata@rki.de" ;
+        foaf:name "Robert Koch-Institut | Open Data Team"
+      ] ;
     dct:contributor [
     a foaf:Agent;
         foaf:name "Anette Siedler";
@@ -35,34 +35,32 @@
     ] ;
     dct:title "COVID-19-Impfungen_in_Deutschland" ;
     dcat:contactPoint [ a vcard:Organization ;
-        vcard:fn "Robert Koch-Institut | DESH Projektteam" ;
+        vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
         vcard:hasCountryName "Deutschland" ;
-        vcard:hasEmail <desh@rki.de> ;
+        vcard:hasEmail "opendata@rki.de";
         vcard:hasLocality "Berlin" ;
         vcard:hasPostalCode "13353" ;
         vcard:hasStreetAddress "Nordufer 20"
-        ] ;
-    dcat:distribution <https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/master/SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz>;
+      ] ;
+    dcat:distribution [
+      a dcat:Distribution ;
+      dcatde:licenseAttributionByText "Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:10.5281/zenodo.5126652" ;
+      dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+      dct:description "Der Datensatz enthält Daten über den Verlauf der COVID-19-Impfungen in Deutschland und die in der Datenverarbeitung unterstützenden Kontextmaterialien. Im Datensatz enthalten sind: Impfdaten mit tagesaktuellen Meldungen von COVID-19-Impfungen, Datenschema der Impfdaten, Archiv mit der Sammlung aller bisherigen Impfzahlentabellen, Lizenz Datei mit der Nutzungslizenz des Datensatzes, Datensatzdokumentation in deutscher Sprache, Metadaten Datei zum Import in Zenodo" ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+      dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+      dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+      dct:title "Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv" ;
+      dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/master/Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv>;
+                      ];
     dcat:keyword "COVID-19",
 "Coronavirus",
 "Deutschland",
-"Genom",
+"Impfung",
 "RKI",
-"SARS-CoV-2",
-"Virussequencen";;
+"SARS-CoV-2";
     dcat:landingPage <https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland#readme> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
         <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
         <http://publications.europa.eu/resource/authority/data-theme/TECH> .
-
-<doi.org/10.5281/zenodo.5139363>
-    a dcat:Distribution ;
-    dcatde:licenseAttributionByText "Robert Koch-Insitut (2021): SARS-CoV-2-Sequenzdaten aus Deutschland, Berlin: Zenodo. DOI: 10.5281/zenodo.5139363" ;
-    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-    dct:description "Die Daten enthalten die über DESH an das RKI..." ;
-    dct:format <https://publications.europa.eu/resource/authority/file-type/FASTA> ;
-    dct:language <https://publications.europa.eu/resource/authority/language/DEU> ;
-    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
-    dct:title "SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz" ;
-    dcat:accessURL <https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/master/SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz> .
 
