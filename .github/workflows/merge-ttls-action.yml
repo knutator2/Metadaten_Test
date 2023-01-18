@@ -12,7 +12,7 @@ jobs:
       - name: debug prefixes
         run: cat all.ttl
       - name: ebug2
-        run: find -type f ! -name 'all.ttl' -name 'test.ttl' -o -name 'hospitalisations.ttl' -o -name 'sequence_data.ttl' | xargs grep -h '@prefix' | sort | uniq
+        run: find -type f ! -name 'all.ttl' -name 'test.ttl' -o -name 'sequence_data.ttl' | xargs grep -h '@prefix' | sort | uniq
       - name: Merge content of all ttl files and append it to 'all.tll'
         run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -vh '@prefix' >> all.ttl
       - name: debug whole file
