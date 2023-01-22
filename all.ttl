@@ -24,7 +24,7 @@
                     foaf:mbox "opendata@rki.de" ;
                     foaf:name "Robert Koch-Institut | MF 4 - Forschungsdatenmanagement"
       ] ;
-    dct:title "Test" ;
+    dct:title "Test2" ;
     dcat:contactPoint [ a vcard:Organization ;
                         vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
                         vcard:hasCountryName "Deutschland" ;
