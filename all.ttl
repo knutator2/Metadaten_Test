@@ -6,25 +6,31 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<test.de/test>
+<https://github.com/robert-koch-institut/SARS-CoV-2-Nowcasting_und_-R-Schaetzung>
     a dcat:Dataset ;
-    dcatde:contributorID <test.de/robertKochInstitut> ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
     dcatde:maintainer [ a foaf:Agent ;
-                        foaf:mbox "test@rki.de" ;
-                        foaf:name "test | Open Data Team"
+        foaf:mbox "opendata@rki.de" ;
+        foaf:name "Robert Koch-Institut | Open Data Team"
       ] ;
     dct:contributor [
           a foaf:Agent;
-          foaf:name "Max Mustermann";
+          foaf:name "Matthias an der Heiden";
+      ],[
+          a foaf:Agent;
+          foaf:name "Justus Benzler";
+      ],[
+          a foaf:Agent;
+          foaf:name "Hannes Wuensche";
       ];
-    dct:description "" ;
+    dct:description "Das Nowcasting erstellt eine Schätzung des Verlaufs der Anzahl von bereits erfolgten SARS-CoV-2-Erkrankungsfällen in Deutschland unter Berücksichtigung des Diagnose-, Melde- und Übermittlungsverzugs. Aufbauend auf dem Nowcasting kann eine Schätzung der zeitabhängigen Reproduktionszahl R (oder R-Wert) durchgeführt werden. Die Reproduktionszahl beschreibt, wie viele Menschen eine infizierte Person im Mittel ansteckt. Sie kann nicht alleine als Maß für die Notwendigkeit und Wirksamkeit von Maßnahmen herangezogen werden. Wichtig sind außerdem u.a. die absolute Zahl der täglichen Neuinfektionen sowie die Schwere der Erkrankungen. Die absolute Zahl der Neuinfektionen muss klein genug sein, um eine effektive Kontaktpersonennachverfolgung zu ermöglichen, und die Zahl der schweren Erkrankungen klein genug, um die Kapazitäten an Intensivbetten nicht zu überlasten." ;
     dct:issued "2021-07-20T00:00:00"^^xsd:dateTime ;
     dct:modified "2021-08-17T06:25:05.371498"^^xsd:dateTime ;
     dct:publisher [ a foaf:Organization ;
                     foaf:mbox "opendata@rki.de" ;
                     foaf:name "Robert Koch-Institut | MF 4 - Forschungsdatenmanagement"
       ] ;
-    dct:title "Test2" ;
+    dct:title "SARS-CoV-2-Nowcasting und -R-Schätzung" ;
     dcat:contactPoint [ a vcard:Organization ;
                         vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
                         vcard:hasCountryName "Deutschland" ;
@@ -35,15 +41,71 @@
       ] ;
     dcat:distribution [
           a dcat:Distribution ;
-          dcatde:licenseAttributionByText "Robert Koch-Insitut (2021): COVID-19-Hospitalisierungen in Deutschland, Berlin: Zenodo. DOI: 10.5281/zenodo.5139363" ;
+          dcatde:licenseAttributionByText "an der Heiden, Matthias (2023): SARS-CoV-2-Nowcasting und -R-Schaetzung, Berlin: Zenodo. DOI:10.5281/zenodo.7546688." ;
           dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-          dct:description "Die Daten enthalten die Hospitalisierungen..." ;
+          dct:description "Die Tabelle des Nowcastings und der R-Schätzung wird jeden Tag um die Zeile der Daten des vergangenen Tages erweitert. Die Fallzahlenschätzungen und R-Wert-Angaben bilden einen tagesaktuellen Stand (00:00 Uhr) ab. Die Schätzwerte zur Anzahl von Neuerkrankungen und der R-Schätzung zu früheren Tagen können von den Angaben in früheren Versionen der Tabelle abweichen, weil täglich der Gesamtverlauf, aufgrund der aktuell verfügbaren Daten, neu geschätzt wird." ;
           dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
           dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
           dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
-          dct:title "Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv" ;
-          dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland/master/Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv>;
+          dct:title "Nowcast_R_aktuell.csv" ;
+          dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/SARS-CoV-2-Nowcasting_und_-R-Schaetzung/main/Nowcast_R_aktuell.csv>;
       ];
+    dcat:keyword "COVID-19",
+    "Coronavirus",
+    "Deutschland",
+    "Nowcast",
+    "infektion",
+    "sars-cov-2";
+    dcat:landingPage <https://github.com/robert-koch-institut/SARS-CoV-2-Nowcasting_und_-R-Schaetzung> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
+    <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
+    <http://publications.europa.eu/resource/authority/data-theme/TECH> .
+
+
+<https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
+    dcatde:maintainer [ a foaf:Agent ;
+        foaf:mbox "opendata@rki.de" ;
+        foaf:name "Robert Koch-Institut | Open Data Team"
+        ] ;
+    dct:contributor [
+      a foaf:Agent;
+        foaf:name "Michaela Diercke";
+        ],[
+      a foaf:Agent;
+        foaf:name "Matthias an der Heiden";
+        ],[
+      a foaf:Agent;
+        foaf:name "Alexander Ullrich";
+        ];
+    dct:description "Im Datensatz \"COVID-19-Hospitalisierungen in Deutschland\" werden die aktuellen Zahlen der nach den Vorgaben des Infektionsschutzgesetzes - IfSG - erfassten hospitalisierten COVID-19-Fälle bereitgestellt. Um den Trend der Anzahl von Hospitalisierungen und der 7-Tage-Hospitalisierungsinzidenz besser bewerten zu können, wird die berichtete Hospitalisierungsinzidenz um eine Schätzung der zu erwartenden Anzahl an verzögert berichteten Hospitalisierungen ergänzt. Neben den Daten der gemeldeten COVID-19-Hospitalisierungen auf Bundes- und Länderebene wird daher ein Nowcasting der Anzahl hospitalisierter Fälle und der 7-Tage-Hospitalisierungsinzidenz auf Bundesebene durchgeführt. Ziel ist die Schätzung der Anzahl von hospitalisierten COVID-19-Fällen mit Meldedatum innerhalb der sieben vorhergehenden Tage - inklusive der noch nicht an das RKI berichteten Hospitalisierungen. Aufbauend auf dem Nowcasting wird eine Schätzung der adjustierten 7-Tage-Hospitalisierungsinzidenz durchgeführt." ;
+    dct:issued "2021-07-20T00:00:00"^^xsd:dateTime ;
+    dct:modified "2021-08-17T06:25:05.371498"^^xsd:dateTime ;
+    dct:publisher [ a foaf:Organization ;
+        foaf:mbox "opendata@rki.de" ;
+        foaf:name "Robert Koch-Institut | MF 4 - Forschungsdatenmanagement"
+    ] ;
+    dct:title "" ;
+    dcat:contactPoint [ a vcard:Organization ;
+        vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
+        vcard:hasCountryName "Deutschland" ;
+        vcard:hasEmail "opendata@rki.de";
+        vcard:hasLocality "Berlin" ;
+        vcard:hasPostalCode "13353" ;
+        vcard:hasStreetAddress "Nordufer 20"
+        ] ;
+    dcat:distribution [
+        a dcat:Distribution ;
+        dcatde:licenseAttributionByText "Robert Koch-Insitut (2021): COVID-19-Hospitalisierungen in Deutschland, Berlin: Zenodo. DOI: 10.5281/zenodo.5139363" ;
+        dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+        dct:description "Der Datensatz enthält epidemiologische Daten zur Anzahl und 7-Tage-Inzidenz der hospitalisierten COVID-19-Fälle nach Bundesland und Altersgruppen in Deutschland. Im Datensatz enthalten sind: Hospitalisierte COVID-19-Fälle auf Bundes- und Länderebene, Berechnung der adjustierten COVID-19-Hospitalisierungen auf Bundesebene, Archiv mit der Sammlung aller bisherigen Hospitalisierungsdaten, Lizenz-Datei mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch, Datensatzdokumentation in deutscher Sprache und die Metadaten-Datei zum Import in Zenodo" ;
+        dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+        dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+        dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+        dct:title "Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv" ;
+        dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland/master/Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv>;
+    ];
     dcat:keyword "COVID-19",
     "Coronavirus",
     "Deutschland",
@@ -53,8 +115,70 @@
     "sars-cov-2";
     dcat:landingPage <https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
-    <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
-    <http://publications.europa.eu/resource/authority/data-theme/TECH> .
+        <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
+        <http://publications.europa.eu/resource/authority/data-theme/TECH> .
+
+
+              <https://zenodo.org/record/7043025> a dcat:Dataset ;
+                  dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
+                  dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@rki.de" ; foaf:name "Robert Koch-Institut | Open Data Team"] ;
+                  dcatde:contributor [ a foaf:Person; foaf:name "Hannelore Neuhauser"; foaf:account <http://orcid.org/0000-0002-6605-6221>; ],[ a foaf:Person; foaf:name "Nina Buttmann-Schweiger"; foaf:account <http://orcid.org/0000-0001-6946-635X>; ],[ a foaf:Person; foaf:name "Julia Fiebig" ],[ a foaf:Person; foaf:name "Christina Poethko-Müller" ],[ a foaf:Person; foaf:name "Franziska Prütz" ],[ a foaf:Person; foaf:name "Giselle Sarganas Margolis" ],[ a foaf:Person; foaf:name "Roma Thamm" ],[ a foaf:Person; foaf:name "Marlow Zimmermann"; foaf:account <http://orcid.org/0000-0002-9249-9077>; ];
+                  dct:description "Die seit 2019 auftretende Infektionskrankheit COVID-19, hervorgerufen durch das neuartige SARS-CoV-2-Virus, führte zu gesundheitspolitischen und gesamtgesellschaftlichen Herausforderungen. Um geeignete Maßnahmen zur Eindämmung der Pandemie ergreifen zu können und neue Erkenntnisse über die Pandemie zu gewinnen, gibt es vermehrt Forschungsbedarfe zu COVID-19. Ein Ansatzpunkt hierfür sind die gewonnenen Blutproben von infizierten sowie von nicht infizierten Personen, die in Laboren auf Antikörper gegen das SARS-CoV-2-Virus getestet und analysiert werden. Sie geben Aufschluss über den Anteil der Bevölkerung, der bereits eine Infektion mit SARS-CoV-2 durchgemacht hat, und schließen dabei nicht erkannte Infektionen (Untererfassung) ein.<br>Das Projekt 'Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland' (SERO-OBS Corona) gibt eine Übersicht zu Antikörper-Studien (sogenannte seroepidemiologische Studien) in Deutschland. Die seroepidemiologischen Studien basieren auf Blutproben von Bürgerinnen und Bürgern, die zu unterschiedlichen Zeitpunkten der Pandemie auf Antikörper gegen das SARS-CoV-2-Virus getestet wurden. Dabei sollen z. B. folgende Fragen beantwortet werden: Wie ist die Häufigkeit von SARS-CoV-2-Infektionen in verschiedenen Bevölkerungsgruppen? Wie hoch ist der Untererfassungsfaktor, der zeigt, wie viel Mal mehr Infektionen im Vergleich zu den bislang bekannten (gemeldeten) Fällen aufgetreten sind? In dem vorliegenden Projekt werden in Deutschland durchgeführte seroepidemiologische Studien zu SARS-CoV-2 seit dem Frühjahr 2020 über systematische Recherchen in Studienregistern, Literaturdatenbanken einschließlich Vorveröffentlichungen sowie Medienberichten fortlaufend identifizier und Studieninformationen sowie Ergebnisübersichten verfügbar gemacht.<br><br>Die Ergebnisse des Projektes SERO-OBS-Corona werden auf der Webseite <a href=\"http://www.rki.de/covid-19-ak-studien%22%3Ewww.rki.de/covid-19-ak-studien\">www.rki.de/covid-19-serostudies-germany</a>, auf Deutsch, sowie der Webseite <a href=\"http://www.rki.de/covid-19-serostudies-germany\">http://www.rki.de/covid-19-serostudies-germany</a>, auf Englisch, bereitgestellt und regelmäßig aktualisiert." ;
+                  dct:issued "2022-09-02T09:06:09+02:00"^^xsd:dateTime ;
+                  dct:modified "2022-09-02T09:06:09+02:00"^^xsd:dateTime ;
+                  dct:publisher [ a foaf:Organization ;
+                      foaf:mbox "opendata@rki.de" ;
+                      foaf:name "Robert Koch Institut"
+                  ] ;
+                  dct:title "Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland" ;
+                   dcat:contactPoint [ a vcard:Organization ;
+                        vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
+                        vcard:hasCountryName "Deutschland" ;
+                        vcard:hasEmail "opendata@rki.de";
+                        vcard:hasLocality "Berlin" ;
+                        vcard:hasPostalCode "13353" ;
+                        vcard:hasStreetAddress "Nordufer 20"
+                  ];
+                  dcat:landingPage <https://robert-koch-institut.github.io/Observatorium_serologischer_Studien_zu_SARS-CoV-2_in_Deutschland>;
+                  dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
+                                <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
+                                <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+                  dcat:keyword "SARS-CoV-2","Infektion","Infections","Serum","Immune Sera","Immunseren","Viral Antibodies","Virusantikoerper","Seroprävalenz","Seroprevalence","Seroepidemiologische Studien","Seroepidemiologic Studies","RKI","Germany","Deutschland","Gesundheitsberichterstattung","Epidemiologie","Public health surveillance","Epidemiology";
+                  dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0>;
+                  dcat:distribution [
+                    a dcat:Distribution ;
+                    dcatde:licenseAttributionByText "Neuhauser, Hannelore et. al. (2023): Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland, Berlin: Zenodo. DOI:10.5281/zenodo.7043025" ;
+                    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+                    dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
+                    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+                    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+                    dct:title "Github - Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland" ;
+                    dcat:accessURL <https://github.com/robert-koch-institut/Observatorium_serologischer_Studien_zu_SARS-CoV-2_in_Deutschland>;
+                    dct:modified "2022-09-02T09:06:09+02:00"^^xsd:dateTime;
+                  ],
+                  [
+                    a dcat:Distribution ;
+                    dcatde:licenseAttributionByText "Neuhauser, Hannelore et. al. (2023): Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland, Berlin: Zenodo. DOI:10.5281/zenodo.7043025" ;
+                    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+                    dct:description "Zenodo ist eine europäische Plattform, die es Forschern, Wissenschaftlern und anderen Personen ermöglicht, Forschungsdaten, Publikationen, Präsentationen und andere wissenschaftliche Inhalte kostenlos zu teilen und zu veröffentlichen. Eine der Hauptstärken von Zenodo ist die Bereitstellung der Daten nach den FAIR Prinzipien, Daten sind langzeitarchiviert und wissenschaftlich zitierbar, um den Datenaustausch und die Zusammenarbeit zwischen Forschern zu erleichtern.";
+                    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+                    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+                    dct:title "Zenodo - Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland" ;
+                    dcat:accessURL <https://zenodo.org/record/7043025>;
+                    dct:modified "2022-09-02T09:06:09+02:00"^^xsd:dateTime;
+                  ],
+                  [
+                    a dcat:Distribution ;
+                    dct:title "[Dokumentation] Observatorium_serologischer_Studien_zu_SARS-CoV-2_in_Deutschland.pdf" ;
+                    dcatde:licenseAttributionByText "Neuhauser, Hannelore et. al. (2023): Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland, Berlin: Zenodo. DOI:10.5281/zenodo.7043025" ;
+                    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+                    dct:description "Die Datensatzdokumentation enthält Informationen und Hinweise zum Entstehungskontext, dem Aufbau und der Nachnutzung der im Datensatz 'Observatorium serologischer Studien zu SARS-CoV-2 in Deutschland' bereitgestellten Daten" ;
+                    dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
+                    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+                    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+                    dcat:accessURL <https://zenodo.org/record/7043025/files/%5BDokumentation%5D_Observatorium_serologischer_Studien_zu_SARS-CoV-2_in_Deutschland.pdf>;
+                    dct:modified "2022-09-02T09:06:09+02:00"^^xsd:dateTime;
+                  ].
 
 <test.de/test>
     a dcat:Dataset ;
@@ -221,31 +345,25 @@
         <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
         <http://publications.europa.eu/resource/authority/data-theme/TECH> .
 
-<https://github.com/robert-koch-institut/SARS-CoV-2-Nowcasting_und_-R-Schaetzung>
+<test.de/test>
     a dcat:Dataset ;
-    dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
+    dcatde:contributorID <test.de/robertKochInstitut> ;
     dcatde:maintainer [ a foaf:Agent ;
-        foaf:mbox "opendata@rki.de" ;
-        foaf:name "Robert Koch-Institut | Open Data Team"
+                        foaf:mbox "test@rki.de" ;
+                        foaf:name "test | Open Data Team"
       ] ;
     dct:contributor [
           a foaf:Agent;
-          foaf:name "Matthias an der Heiden";
-      ],[
-          a foaf:Agent;
-          foaf:name "Justus Benzler";
-      ],[
-          a foaf:Agent;
-          foaf:name "Hannes Wuensche";
+          foaf:name "Max Mustermann";
       ];
-    dct:description "Das Nowcasting erstellt eine Schätzung des Verlaufs der Anzahl von bereits erfolgten SARS-CoV-2-Erkrankungsfällen in Deutschland unter Berücksichtigung des Diagnose-, Melde- und Übermittlungsverzugs. Aufbauend auf dem Nowcasting kann eine Schätzung der zeitabhängigen Reproduktionszahl R (oder R-Wert) durchgeführt werden. Die Reproduktionszahl beschreibt, wie viele Menschen eine infizierte Person im Mittel ansteckt. Sie kann nicht alleine als Maß für die Notwendigkeit und Wirksamkeit von Maßnahmen herangezogen werden. Wichtig sind außerdem u.a. die absolute Zahl der täglichen Neuinfektionen sowie die Schwere der Erkrankungen. Die absolute Zahl der Neuinfektionen muss klein genug sein, um eine effektive Kontaktpersonennachverfolgung zu ermöglichen, und die Zahl der schweren Erkrankungen klein genug, um die Kapazitäten an Intensivbetten nicht zu überlasten." ;
+    dct:description "" ;
     dct:issued "2021-07-20T00:00:00"^^xsd:dateTime ;
     dct:modified "2021-08-17T06:25:05.371498"^^xsd:dateTime ;
     dct:publisher [ a foaf:Organization ;
                     foaf:mbox "opendata@rki.de" ;
                     foaf:name "Robert Koch-Institut | MF 4 - Forschungsdatenmanagement"
       ] ;
-    dct:title "SARS-CoV-2-Nowcasting und -R-Schätzung" ;
+    dct:title "Test2" ;
     dcat:contactPoint [ a vcard:Organization ;
                         vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
                         vcard:hasCountryName "Deutschland" ;
@@ -256,71 +374,15 @@
       ] ;
     dcat:distribution [
           a dcat:Distribution ;
-          dcatde:licenseAttributionByText "an der Heiden, Matthias (2023): SARS-CoV-2-Nowcasting und -R-Schaetzung, Berlin: Zenodo. DOI:10.5281/zenodo.7546688." ;
+          dcatde:licenseAttributionByText "Robert Koch-Insitut (2021): COVID-19-Hospitalisierungen in Deutschland, Berlin: Zenodo. DOI: 10.5281/zenodo.5139363" ;
           dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-          dct:description "Die Tabelle des Nowcastings und der R-Schätzung wird jeden Tag um die Zeile der Daten des vergangenen Tages erweitert. Die Fallzahlenschätzungen und R-Wert-Angaben bilden einen tagesaktuellen Stand (00:00 Uhr) ab. Die Schätzwerte zur Anzahl von Neuerkrankungen und der R-Schätzung zu früheren Tagen können von den Angaben in früheren Versionen der Tabelle abweichen, weil täglich der Gesamtverlauf, aufgrund der aktuell verfügbaren Daten, neu geschätzt wird." ;
+          dct:description "Die Daten enthalten die Hospitalisierungen..." ;
           dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
           dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
           dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
-          dct:title "Nowcast_R_aktuell.csv" ;
-          dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/SARS-CoV-2-Nowcasting_und_-R-Schaetzung/main/Nowcast_R_aktuell.csv>;
+          dct:title "Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv" ;
+          dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland/master/Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv>;
       ];
-    dcat:keyword "COVID-19",
-    "Coronavirus",
-    "Deutschland",
-    "Nowcast",
-    "infektion",
-    "sars-cov-2";
-    dcat:landingPage <https://github.com/robert-koch-institut/SARS-CoV-2-Nowcasting_und_-R-Schaetzung> ;
-    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
-    <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
-    <http://publications.europa.eu/resource/authority/data-theme/TECH> .
-
-
-<https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland>
-    a dcat:Dataset ;
-    dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
-    dcatde:maintainer [ a foaf:Agent ;
-        foaf:mbox "opendata@rki.de" ;
-        foaf:name "Robert Koch-Institut | Open Data Team"
-        ] ;
-    dct:contributor [
-      a foaf:Agent;
-        foaf:name "Michaela Diercke";
-        ],[
-      a foaf:Agent;
-        foaf:name "Matthias an der Heiden";
-        ],[
-      a foaf:Agent;
-        foaf:name "Alexander Ullrich";
-        ];
-    dct:description "Im Datensatz \"COVID-19-Hospitalisierungen in Deutschland\" werden die aktuellen Zahlen der nach den Vorgaben des Infektionsschutzgesetzes - IfSG - erfassten hospitalisierten COVID-19-Fälle bereitgestellt. Um den Trend der Anzahl von Hospitalisierungen und der 7-Tage-Hospitalisierungsinzidenz besser bewerten zu können, wird die berichtete Hospitalisierungsinzidenz um eine Schätzung der zu erwartenden Anzahl an verzögert berichteten Hospitalisierungen ergänzt. Neben den Daten der gemeldeten COVID-19-Hospitalisierungen auf Bundes- und Länderebene wird daher ein Nowcasting der Anzahl hospitalisierter Fälle und der 7-Tage-Hospitalisierungsinzidenz auf Bundesebene durchgeführt. Ziel ist die Schätzung der Anzahl von hospitalisierten COVID-19-Fällen mit Meldedatum innerhalb der sieben vorhergehenden Tage - inklusive der noch nicht an das RKI berichteten Hospitalisierungen. Aufbauend auf dem Nowcasting wird eine Schätzung der adjustierten 7-Tage-Hospitalisierungsinzidenz durchgeführt." ;
-    dct:issued "2021-07-20T00:00:00"^^xsd:dateTime ;
-    dct:modified "2021-08-17T06:25:05.371498"^^xsd:dateTime ;
-    dct:publisher [ a foaf:Organization ;
-        foaf:mbox "opendata@rki.de" ;
-        foaf:name "Robert Koch-Institut | MF 4 - Forschungsdatenmanagement"
-    ] ;
-    dct:title "" ;
-    dcat:contactPoint [ a vcard:Organization ;
-        vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
-        vcard:hasCountryName "Deutschland" ;
-        vcard:hasEmail "opendata@rki.de";
-        vcard:hasLocality "Berlin" ;
-        vcard:hasPostalCode "13353" ;
-        vcard:hasStreetAddress "Nordufer 20"
-        ] ;
-    dcat:distribution [
-        a dcat:Distribution ;
-        dcatde:licenseAttributionByText "Robert Koch-Insitut (2021): COVID-19-Hospitalisierungen in Deutschland, Berlin: Zenodo. DOI: 10.5281/zenodo.5139363" ;
-        dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-        dct:description "Der Datensatz enthält epidemiologische Daten zur Anzahl und 7-Tage-Inzidenz der hospitalisierten COVID-19-Fälle nach Bundesland und Altersgruppen in Deutschland. Im Datensatz enthalten sind: Hospitalisierte COVID-19-Fälle auf Bundes- und Länderebene, Berechnung der adjustierten COVID-19-Hospitalisierungen auf Bundesebene, Archiv mit der Sammlung aller bisherigen Hospitalisierungsdaten, Lizenz-Datei mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch, Datensatzdokumentation in deutscher Sprache und die Metadaten-Datei zum Import in Zenodo" ;
-        dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-        dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
-        dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
-        dct:title "Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv" ;
-        dcat:accessURL <https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland/master/Aktuell_Deutschland_COVID-19-Hospitalisierungen.csv>;
-    ];
     dcat:keyword "COVID-19",
     "Coronavirus",
     "Deutschland",
@@ -330,6 +392,5 @@
     "sars-cov-2";
     dcat:landingPage <https://github.com/robert-koch-institut/COVID-19-Hospitalisierungen_in_Deutschland> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
-        <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
-        <http://publications.europa.eu/resource/authority/data-theme/TECH> .
-
+    <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
+    <http://publications.europa.eu/resource/authority/data-theme/TECH> .
