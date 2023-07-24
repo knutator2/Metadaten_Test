@@ -7,18 +7,10 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-      - name: debug ls
-        run: ls
       - name: find Namespaces in a random ttl file which is not 'all.ttl' and add it to 'all.ttl'
         run: find -type f ! -name 'all.ttl' -name '*.ttl' | head -n 1 | xargs grep -h '@prefix' > all.ttl
-      - name: debug prefixes
-        run: cat all.ttl
-      - name: ebug2
-        run: find -type f ! -name 'all.ttl' -name '*.ttl' | head -n 1 | xargs grep -h '@prefix'
       - name: Merge content of all ttl files and append it to 'all.tll'
         run: find -type f ! -name 'all.ttl' -name '*.ttl' | xargs grep -vh '@prefix' >> all.ttl
-      - name: debug whole file
-        run: cat all.ttl
       - name: Add and Commit Changes
         uses: EndBug/add-and-commit@v9.0.1
         with:
