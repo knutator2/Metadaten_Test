@@ -21,7 +21,7 @@ abstract: >-
   - inklusive der noch nicht an das RKI berichteten Hospitalisierungen.
   Aufbauend auf dem Nowcasting wird eine Schätzung der adjustierten
   7-Tage-Hospitalisierungsinzidenz durchgeführt.
-date-released: '2023-04-06'
+date-released: '2023-08-02'
 keywords:
   - Hospitalization
   - Krankenhauseinweisung
@@ -41,6 +41,7 @@ keywords:
 message: Cite me!
 url: http://test.de
 license: CC-BY-4.0
-doi: 10.5281/zenodo.7804055
+doi: 10.5072/zenodo.1227332
+version: '2023-08-02T14:25:33+02:00'
 authors:
   - name: Robert Koch-Institut
