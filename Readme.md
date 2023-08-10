@@ -15,7 +15,7 @@ MF 4 | Fach- und Forschungsdatenmanagement
 
 ---
 **Zitieren**
-Wiedermann M., Bruckmann, R. W., Brockmann D. (2023). Corona-Datenspende - Teildatensatz Vitaldaten. Zenodo. DOI: [10.5281/zenodo.8229284](https://doi.org/10.5281/zenodo.8229284).  
+Wiedermann M., Bruckmann R. W., Brockmann D. (2023). Corona-Datenspende - Teildatensatz Vitaldaten. Zenodo. DOI: [10.5281/zenodo.8229284](https://doi.org/10.5281/zenodo.8229284).  
 
 
 ## Informationen zum Datensatz und Entstehungskontext 
