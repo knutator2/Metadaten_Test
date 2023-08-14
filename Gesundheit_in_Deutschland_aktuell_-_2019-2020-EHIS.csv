@@ -1,12 +1,6 @@
 ﻿Altersgruppe,Bildungsgruppe,Gender,Frequency,Freq_ges,Percent,LowerCL,UpperCL,Bundesland,Standard,Variable,BundeslandId
 18 - 29 Jahre,Gesamt,Frauen,302,899,36.902,32.817,41.184,Deutschland,0,AMarztB,0
 18 - 29 Jahre,Gesamt,Gesamt,561,2100,28.312,25.793,30.974,Deutschland,0,AMarztB,0
-18 - 29 Jahre,Gesamt,Männer,254,1188,20.697,17.841,23.878,Deutschland,0,AMarztB,0
-Gesamt,Gesamt,Gesamt,379,2504,13.176,11.427,15.147,Baden-Württemberg,1,Akrisiko_k,8
-Gesamt,Mittlere,Gesamt,1300,9524,13.44,12.495,14.445,Deutschland,1,Akrisiko_k,0
-Gesamt,Mittlere,Gesamt,1300,9524,13.498,12.582,14.47,Deutschland,0,Akrisiko_k,0
-Gesamt,Untere,Gesamt,119,1320,8.701,6.898,10.919,Deutschland,1,Akrisiko_k,0
-Gesamt,Untere,Gesamt,119,1320,8.815,7.139,10.837,Deutschland,0,Akrisiko_k,0
 Gesamt,Gesamt,Männer,8,92,10.838,5.271,20.983,Bremen,1,Akrisiko_k,4
 Gesamt,Gesamt,Männer,8,92,23.799,9.85,47.167,Bremen,0,Akrisiko_k,4
 Gesamt,Gesamt,Männer,28,184,16.441,10.455,24.901,Mecklenburg-Vorpommern,1,Akrisiko_k,13

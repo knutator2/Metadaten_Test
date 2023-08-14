@@ -47,7 +47,7 @@
     "RKI"
   ],
   "publication_date": "2023-08-14",
-  "version": "2022-05-05",
+  "version": "2020-05-05",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "CC-BY-4.0",
@@ -77,8 +77,8 @@
   ],
   "dates": [
     {
-      "start": "2022-05-05T00:00:00+02:00",
-      "end": "2022-05-05T00:00:00+02:00",
+      "start": "2020-05-05T00:00:00+02:00",
+      "end": "2020-05-05T00:00:00+02:00",
       "type": "Collected",
       "description": "Date when the Dataset was created"
     }
